@@ -27,7 +27,7 @@ class App extends Component {
         //crete item with unique id
         const newItem = {
           id: 1 + Math.random(),
-          value: this.value.newItem.slice()
+          value:this.state.newItem.slice()
         };
 
         //copy of current list of item
@@ -48,7 +48,7 @@ class App extends Component {
       deleteItem(id){
 
         //copy current list of item
-        const list = {...this.state.list};
+        const list = [...this.state.list];
 
         //filter out item being deleted
         const updatedList = list.filter( item => item.id !== id);
