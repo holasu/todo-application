@@ -1,5 +1,6 @@
 
 import React,{Component} from 'react';
+import './Stylesheets.css'
 
 class App extends Component {
 
@@ -59,39 +60,55 @@ class App extends Component {
       }
 
       render(){
+
         return(
-          <div className="App">
-            <div>
-                Add an items...
-                <br/>
-                <input
-                  type="text"
-                  placeholder="Add your task.."
-                  value={this.state.newItem}
-                  onChange={e=> this.updateInput("newItem", e.target.value)}
-                />
+          <div className="App" >
+            <div className = "content">
+                 <h3 className="heading">Add an items...</h3>
 
-                <button
-                  onClick={()=> this.addItem()}
-                >
-                  Add
-                </button>
+                    <div className= "main-box">
+                    <input
+                      className="input"
+                      type="text"
+                      placeholder="Add your task.."
+                      value={this.state.newItem}
+                      onChange={e=> this.updateInput("newItem", e.target.value)}
+                    />
 
-                <br/>
-                <ul>
-                  {this.state.list.map( item=>{
-                    return(
-                      <li key={item.id}>
-                        {item.value}
-                        <button 
-                         onClick={()=> this.deleteItem(item.id)}
-                        >X</button>
-                      </li>
-                    )
-                  })}
-                 
-                </ul>
+                    <br/><br/>
+
+                    <button
+                      
+                      className="my-button"
+                      onClick={()=> this.addItem()}
+                      
+                    >
+                      Add..
+                    </button>
+
+                    <br/>
+                    <ul className="list-items">
+                      {this.state.list.map( item=>{
+                        return(
+                          <li key={item.id}
+                            className="task-order"
+                          >
+                            {item.value}
+                            <button 
+                            className="delete-button"
+                            onClick={()=> this.deleteItem(item.id)}
+                            >Done</button>
+                          </li>
+                        )
+                      })}
+                    
+                    </ul>
+
+                    </div>
+
+
             </div>
+               
           </div>
         );
       }

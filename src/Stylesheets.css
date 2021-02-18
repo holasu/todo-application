@@ -1,0 +1,44 @@
+.content {
+  background-color: #fc69ba;
+  margin: 20px 500px 20px 500px;
+}
+
+.heading {
+  text-align: center;
+  font-family: monospace;
+  font-size: x-large;
+  color: #19053d;
+  margin-top: 10%;
+  padding: 20px 40px 1px 40px;
+}
+
+.main-box {
+  text-align: center;
+}
+
+.input {
+  color: #090e02;
+}
+
+.my-button {
+  color: hsl(0, 33%, 96%);
+  background-color: #0f12f7;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  padding: 2px 20px 2px 20px;
+}
+
+.list-items {
+  text-align: center;
+}
+
+.task-order {
+  text-align: center;
+}
+
+.delete-button {
+  color: hsl(0, 33%, 96%);
+  background-color: #0f12f7;
+  margin: 10px 10px 10px 10px;
+  padding: 2px 10px 2px 10px;
+}
